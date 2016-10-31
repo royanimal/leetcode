@@ -1,0 +1,10 @@
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int i,hlen=haystack.size(),slen=needle.size();
+        if(hlen<slen)   return -1;
+        if(!slen)   return 0;
+        for(i=0;i<=hlen-slen && haystack.substr(i,slen)!=needle;i++);
+        return i<=hlen-slen?i:-1;
+    }
+};
