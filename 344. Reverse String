@@ -1,0 +1,11 @@
+char* reverseString(char* s) {
+    int sl=strlen(s);
+    char t[sl+1];
+    int i;
+    for(i=0;i<sl;i++){
+        t[sl-i-1]=*(s+i);
+    }
+    t[i]='\0';
+    strcpy(s,t);
+    return s;
+}
